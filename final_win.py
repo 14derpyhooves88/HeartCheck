@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import (
     QHBoxLayout, QVBoxLayout, QGridLayout,
     QGroupBox, QRadioButton,
     QPushButton, QLabel, QListWidget, QLineEdit)
+from instr import *
 
 class FinalWin(QWidget):
     
@@ -16,7 +17,17 @@ class FinalWin(QWidget):
         self.show()
 
     def set_appear(self):
-        pass
+        self.setWindowTitle(txt_title)
+        self.resize(window_width, window_height)
+        self.move (win_x, win_y)
 
     def initUI(self):
-        pass
+        self.index = QLabel ('Индекс Руфье: ')
+        self.heart_work = QLabel ('Работоспособность сердца: ')
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.index)
+        self.layout.addWidget(self.heart_work)
+
+app = QApplication([])
+fm = FinalWin()
+app.exec_()

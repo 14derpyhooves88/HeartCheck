@@ -20,14 +20,14 @@ class MainWin(QWidget):
     def initUI(self):
         self.hello_text = QLabel (txt_hello)
         self.instruction = QLabel (txt_instruction)
-        self.button = QPushButton (txt_next)
+        self.btn_next = QPushButton (txt_next)
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.hello_text)
         self.layout.addWidget(self.instruction)
         self.layout.addWidget(self.button)
 
     def connects(self):
-        self.btn_next.clicked.coonect(self.next_click)
+        self.btn_next.clicked.connect(self.next_click)
     
     def next_click(self):
         self.hide()
