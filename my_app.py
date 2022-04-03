@@ -24,7 +24,7 @@ class MainWin(QWidget):
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.hello_text)
         self.layout.addWidget(self.instruction)
-        self.layout.addWidget(self.button)
+        self.layout.addWidget(self.txt_next)
 
     def connects(self):
         self.btn_next.clicked.connect(self.next_click)
