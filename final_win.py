@@ -19,7 +19,7 @@ class FinalWin(QWidget):
 
     def set_appear(self):
         self.setWindowTitle(txt_title)
-        self.resize(window_width, window_height)
+        self.resize(win_width, win_height)
         self.move (win_x, win_y)
 
     def initUI(self):

@@ -31,7 +31,7 @@ class TestWin(QWidget):
     
     def set_appear(self):
         self.setWindowTitle(txt_title)
-        self.resize(window_width, window_height)
+        self.resize(win_width, win_height)
         self.move (win_x, win_y)
 
     def initUI(self):
@@ -130,5 +130,5 @@ class TestWin(QWidget):
         else:
             self.text_timer.setStyleSheet("color: rgb(0,0,0)")
         self.text_timer.setFont(QFont("Times", 36, QFont.bold))
-        if time.tiString("hh:mm:ss") == "00:00:00":
+        if time.toString("hh:mm:ss") == "00:00:00":
             self.timer.stop()
