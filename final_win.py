@@ -30,4 +30,5 @@ class FinalWin(QWidget):
 
 app = QApplication([])
 fm = FinalWin()
+fm.show()
 app.exec_()
