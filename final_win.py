@@ -10,7 +10,8 @@ from instr import *
 
 class FinalWin(QWidget):
     
-    def __init__(self):
+    def __init__(self, experiment):
+        self.exp = experiment
         super().__init__()
         self.set_appear()
         self.initUI()
@@ -28,7 +29,5 @@ class FinalWin(QWidget):
         self.layout.addWidget(self.index)
         self.layout.addWidget(self.heart_work)
 
-app = QApplication([])
-fm = FinalWin()
-fm.show()
-app.exec_()
+
+

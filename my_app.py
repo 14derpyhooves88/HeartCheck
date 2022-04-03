@@ -22,9 +22,10 @@ class MainWin(QWidget):
         self.instruction = QLabel (txt_instruction)
         self.btn_next = QPushButton (txt_next)
         self.layout = QVBoxLayout()
-        self.layout.addWidget(self.hello_text)
-        self.layout.addWidget(self.instruction)
-        self.layout.addWidget(self.txt_next)
+        self.layout.addWidget(self.hello_text, alignment = Qt.AlignLeft)
+        self.layout.addWidget(self.instruction, alignment = Qt.AlignLeft)
+        self.layout.addWidget(self.btn_next, alignment = Qt.AlignCenter)         
+        self.setLayout(self.layout)
 
     def connects(self):
         self.btn_next.clicked.connect(self.next_click)
@@ -35,5 +36,4 @@ class MainWin(QWidget):
 
 app = QApplication([])
 mw = MainWin()
-mw.show()
 app.exec_()
