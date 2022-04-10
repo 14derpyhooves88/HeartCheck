@@ -26,8 +26,8 @@ class FinalWin(QWidget):
         self.index = QLabel ('Индекс Руфье: ')
         self.heart_work = QLabel ('Работоспособность сердца: ')
         self.layout = QVBoxLayout()
-        self.layout.addWidget(self.index)
-        self.layout.addWidget(self.heart_work)
-
+        self.layout.addWidget(self.index, alignment = Qt.AlignCenter)
+        self.layout.addWidget(self.heart_work, alignment = Qt.AlignCenter)
+        self.setLayout(self.layout)
 
 
