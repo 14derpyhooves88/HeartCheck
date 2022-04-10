@@ -74,6 +74,9 @@ class TestWin(QWidget):
 
     def connects(self):
         self.btn4.clicked.connect(self.next_click)
+        self.btn1.clicked.connect(self.timer_test)
+        self.btn2.clicked.connect(self.timer_sits)
+        self.btn3.clicked.connect(self.timer_final)
     
     def next_click(self):
         self.hide()
@@ -97,7 +100,7 @@ class TestWin(QWidget):
         if time.toString("hh:mm:ss") == "00:00:00":
             self.timer.stop()
 
-    def time_sits(self):
+    def timer_sits(self):
         global time 
         time = QTime(0,0,30)
         self.timer = QTimer()
