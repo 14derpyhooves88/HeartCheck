@@ -18,6 +18,7 @@ class FinalWin(QWidget):
         self.show()
 
     def result(self):
+        self.exp.age = int(self.exp.age)
         if self.exp.age < 7:
             self.index = 0 
             return "нет данных для такого возраста"
@@ -87,8 +88,8 @@ class FinalWin(QWidget):
         self.move (win_x, win_y)
 
     def initUI(self):
-        self.index = QLabel ('Индекс Руфье: ' + str(self.index))
-        self.heart_work = QLabel ('Работоспособность сердца: ' + self.result())
+        self.heart_work = QLabel (txt_workheart + self.result())
+        self.index = QLabel (txt_index + str(self.index))
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.index, alignment = Qt.AlignCenter)
         self.layout.addWidget(self.heart_work, alignment = Qt.AlignCenter)
