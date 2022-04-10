@@ -72,16 +72,12 @@ class TestWin(QWidget):
         self.h_line.addLayout(self.r_line)
         self.setLayout(self.h_line)
 
-    def connects(self):
-        self.btn4.clicked.connect(self.next_click)
-        self.btn1.clicked.connect(self.timer_test)
-        self.btn2.clicked.connect(self.timer_sits)
-        self.btn3.clicked.connect(self.timer_final)
+
     
     def next_click(self):
         self.hide()
-        self.exp = Experiment(self.line_age.text(),self.line_result1.text(),self.line_result2.text(),
-            self.line_result3.text())
+        self.exp = Experiment(self.line_age.text(),self.line_result1.text(),
+            self.line_result2.text(), self.line_result3.text())
         self.fw = FinalWin(self.exp)
 
     def timer_test(self):
@@ -135,3 +131,9 @@ class TestWin(QWidget):
         self.text_timer.setFont(QFont("Times", 36, QFont.bold))
         if time.toString("hh:mm:ss") == "00:00:00":
             self.timer.stop()
+            
+    def connects(self):
+        self.btn4.clicked.connect(self.next_click)
+        self.btn1.clicked.connect(self.timer_test)
+        self.btn2.clicked.connect(self.timer_sits)
+        self.btn3.clicked.connect(self.timer_final)
